@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\PetrolContext.cs" />
+    <Compile Include="Model\Payment.cs" />
     <Compile Include="Model\Petrol.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
     <Compile Include="Program.cs" />

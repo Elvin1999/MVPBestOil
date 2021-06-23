@@ -20,7 +20,7 @@ namespace BestOil.Presenter
             _view.ComboboxIndexChanged += ComboboxIndexChange;
             _view.CheckedChangedLiter += LiterCheckedChanged;
             _view.CheckedChangedAzn += AznCheckedChanged;
-            //method subscribing
+            _view.CalculateButtonClicked += CalculateButtonClicked;
 
             _db = new PetrolContext();
             //_db.Petrols.Add(new Petrol { Name="AI95",Price=1.4 });
@@ -61,6 +61,22 @@ namespace BestOil.Presenter
             else
             {
                 _view.PriceEnabled = false;
+            }
+        }
+        public void CalculateButtonClicked(object sender,EventArgs e)
+        {
+            if (_view.LiterEnabled)
+            {
+                var money = double.Parse(_view.LiterText) * (double.Parse(_view.PriceText));
+                _view.TotalText = money.ToString();
+            }
+            else
+            {
+                var money = double.Parse(_view.MoneyText) / (double.Parse(_view.PriceText));
+                _view.LiterText = String.Empty;
+                var moneyFull = (int)money;
+                _view.LiterText = moneyFull.ToString();
+                _view.TotalText = _view.MoneyText;
             }
         }
 
