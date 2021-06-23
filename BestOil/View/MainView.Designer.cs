@@ -40,14 +40,14 @@ namespace BestOil.View
             this.aznMaskedTxtb = new System.Windows.Forms.MaskedTextBox();
             this.aznRadiobtn = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.totalLbl = new System.Windows.Forms.Label();
             this.calculateBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.totalLbl);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.aznMaskedTxtb);
             this.groupBox1.Controls.Add(this.aznRadiobtn);
@@ -125,6 +125,7 @@ namespace BestOil.View
             // 
             // literMaskettxtb
             // 
+            this.literMaskettxtb.Enabled = false;
             this.literMaskettxtb.Location = new System.Drawing.Point(107, 178);
             this.literMaskettxtb.Mask = "00000";
             this.literMaskettxtb.Name = "literMaskettxtb";
@@ -134,6 +135,7 @@ namespace BestOil.View
             // 
             // aznMaskedTxtb
             // 
+            this.aznMaskedTxtb.Enabled = false;
             this.aznMaskedTxtb.Location = new System.Drawing.Point(107, 215);
             this.aznMaskedTxtb.Mask = "00000";
             this.aznMaskedTxtb.Name = "aznMaskedTxtb";
@@ -162,15 +164,15 @@ namespace BestOil.View
             this.label4.TabIndex = 9;
             this.label4.Text = "azn";
             // 
-            // label5
+            // totalLbl
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(100, 291);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 39);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "0";
+            this.totalLbl.AutoSize = true;
+            this.totalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.totalLbl.Location = new System.Drawing.Point(103, 286);
+            this.totalLbl.Name = "totalLbl";
+            this.totalLbl.Size = new System.Drawing.Size(37, 39);
+            this.totalLbl.TabIndex = 10;
+            this.totalLbl.Text = "0";
             // 
             // calculateBtn
             // 
@@ -182,6 +184,7 @@ namespace BestOil.View
             this.calculateBtn.TabIndex = 11;
             this.calculateBtn.Text = "Calculate";
             this.calculateBtn.UseVisualStyleBackColor = false;
+            this.calculateBtn.Click += new System.EventHandler(this.calculateBtn_Click);
             // 
             // MainView
             // 
@@ -202,7 +205,7 @@ namespace BestOil.View
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label totalLbl;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox aznMaskedTxtb;
         private System.Windows.Forms.RadioButton aznRadiobtn;

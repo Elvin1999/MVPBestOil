@@ -19,6 +19,8 @@ namespace BestOil.View
         string LiterText { get; set; }
         string MoneyText { get; set; }
         string TotalText { get; set; }
+        bool LiterEnabled { get; set; }
+        bool PriceEnabled { get; set; }
 
     }
 }

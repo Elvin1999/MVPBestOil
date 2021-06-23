@@ -13,7 +13,6 @@ namespace BestOil.Data
         public PetrolContext():base("PetrolDb")
         {
         }
-
         public DbSet<Petrol> Petrols { get; set; }
     }
 }
