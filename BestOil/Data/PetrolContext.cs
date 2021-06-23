@@ -14,5 +14,6 @@ namespace BestOil.Data
         {
         }
         public DbSet<Petrol> Petrols { get; set; }
+        public DbSet<Payment> Payments { get; set; }
     }
 }

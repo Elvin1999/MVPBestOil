@@ -23,10 +23,10 @@ namespace BestOil.Presenter
             _view.CalculateButtonClicked += CalculateButtonClicked;
 
             _db = new PetrolContext();
-            //_db.Petrols.Add(new Petrol { Name="AI95",Price=1.4 });
-            //_db.Petrols.Add(new Petrol { Name="AI92",Price=1 });
-            //_db.Petrols.Add(new Petrol { Name="Dizel",Price=0.8 });
-            //_db.SaveChanges();
+            _db.Petrols.Add(new Petrol { Name = "AI95", Price = 1.4 });
+            _db.Petrols.Add(new Petrol { Name = "AI92", Price = 1 });
+            _db.Petrols.Add(new Petrol { Name = "Dizel", Price = 0.8 });
+            _db.SaveChanges();
             var list = _db.Petrols.ToList();
             _view.Petrols = list;
         }
@@ -78,6 +78,9 @@ namespace BestOil.Presenter
                 _view.LiterText = moneyFull.ToString();
                 _view.TotalText = _view.MoneyText;
             }
+
+
+
         }
 
     }

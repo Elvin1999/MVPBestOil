@@ -191,7 +191,7 @@ namespace BestOil.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PapayaWhip;
-            this.ClientSize = new System.Drawing.Size(421, 530);
+            this.ClientSize = new System.Drawing.Size(1113, 530);
             this.Controls.Add(this.calculateBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "MainView";
